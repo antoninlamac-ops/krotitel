@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krotitelé energií | Foukaná izolace Knauf Supafil s dotací NZÚ</title>
-<meta name="description" content="Krotitelé energií – foukaná tepelná izolace Knauf Supafil pro stropy, klenby, podkroví a dutiny. Přes 10 let na trhu. Nejlepší cena na trhu od 1 090 Kč/m³. Možnost půjčení stroje na víkend (foukání svépomocí za 2 500 Kč/den, materiál od 990 Kč/m³).">
+<meta name="description" content="Krotitelé energií – foukaná tepelná izolace Knauf Supafil pro stropy, klenby, podkroví a dutiny. Přes 10 let na trhu. Nejlepší cena na trhu od 1 090 Kč/m³. Spočítejte si cenu i roční úsporu za energie.">
 
 <!-- Favicony -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2317202b'/><path d='M30 70 L50 30 L70 70 Z' fill='%23e4690b'/></svg>">
@@ -179,6 +179,7 @@
   .calc-result{background:var(--navy); color:#fff; padding:16px; border-radius:6px; margin-top:20px; text-align:center;}
   .calc-result .res-val{font-family:var(--font-head); font-size:1.8rem; color:var(--accent); margin-top:4px;}
   .calc-result .res-note{font-size:.85rem; opacity:.9; margin-top:4px;}
+  .calc-saving-val{font-family:var(--font-head); font-size:1.5rem; color:#4caf50; margin-top:2px;}
   .calc-free-shipping{display:inline-block; background:var(--ok); color:#fff; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:4px 10px; border-radius:4px; margin-top:10px;}
   .calc-btn-row{margin-top:14px; text-align:center;}
 
@@ -315,8 +316,8 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Ceník & Kalkulačka</span>
-      <h2>Kolik stojí foukaná izolace Knauf Supafil?</h2>
-      <p>Cena se odvíjí od celkového objemu odebraného materiálu. Pro menší realizace do 15 m³ platí paušální sazba.</p>
+      <h2>Kolik stojí foukaná izolace a kolik ušetříte?</h2>
+      <p>Spočítejte si orientační cenu zateplení podle plochy a tloušťky a zadejte své roční platby za vytápění pro výpočet úspory.</p>
     </div>
     
     <div class="pricing-grid">
@@ -335,7 +336,7 @@
       </div>
 
       <div class="calc-box">
-        <h3>Orientační kalkulačka ceny</h3>
+        <h3>Chytrá kalkulačka úspor a ceny</h3>
         <div class="fgroup">
           <label for="calc-plocha">Celková plocha k zateplení (m²)</label>
           <input type="number" id="calc-plocha" min="1" value="100" oninput="calculatePrice()">
@@ -344,11 +345,21 @@
           <label for="calc-tloustka">Požadovaná tloušťka izolace (cm)</label>
           <input type="number" id="calc-tloustka" min="1" value="30" oninput="calculatePrice()">
         </div>
+        <div class="fgroup">
+          <label for="calc-platby">Vaše roční platby za vytápění (Kč)</label>
+          <input type="number" id="calc-platby" min="0" step="1000" value="40000" oninput="calculatePrice()" placeholder="např. 40000">
+        </div>
         <div class="calc-result">
           <div>Vypočtený objem: <span id="calc-m3-output" style="color:#fff; font-weight:700;">30 m³</span></div>
           <div style="margin-top:8px;">Odhadovaná celková cena:</div>
           <div class="res-val" id="calc-price-output">44 700 Kč</div>
           <div class="res-note" id="calc-unit-output">(cca 1 490 Kč / m³)</div>
+          
+          <div style="margin-top:14px; border-top:1px solid rgba(255,255,255,0.15); padding-top:12px;">
+            <div>Odhadovaná roční úspora (cca 30 %):</div>
+            <div class="calc-saving-val" id="calc-saving-output">12 000 Kč / rok</div>
+          </div>
+
           <div><span class="calc-free-shipping">🚚 Doprava zdarma</span></div>
           <div class="calc-btn-row">
             <button type="button" class="btn btn-primary" style="padding:10px 20px; font-size:.9rem;" onclick="prefillAndScroll()">Poptat tuto kalkulaci</button>
@@ -550,6 +561,7 @@
   function calculatePrice() {
     const plocha = parseFloat(document.getElementById('calc-plocha').value) || 0;
     const tloustkaCm = parseFloat(document.getElementById('calc-tloustka').value) || 0;
+    const platby = parseFloat(document.getElementById('calc-platby').value) || 0;
     
     const objemM3 = plocha * (tloustkaCm / 100);
 
@@ -569,8 +581,12 @@
       celkovaCena = objemM3 * cenaPerM3;
     }
 
+    // Výpočet orientační roční úspory (předpoklad úspory cca 30 % na vytápění při kvalitním zateplení stropu/půdy)
+    const rocniUspora = platby * 0.30;
+
     document.getElementById('calc-m3-output').textContent = objemM3.toFixed(1) + ' m³';
     document.getElementById('calc-price-output').textContent = Math.round(celkovaCena).toLocaleString('cs-CZ') + ' Kč';
+    document.getElementById('calc-saving-output').textContent = Math.round(rocniUspora).toLocaleString('cs-CZ') + ' Kč / rok';
     
     if (objemM3 > 0 && objemM3 <= 15) {
       document.getElementById('calc-unit-output').textContent = '(paušální sazba do 15 m³)';
@@ -584,10 +600,12 @@
   function prefillAndScroll() {
     const plochaVal = document.getElementById('calc-plocha').value;
     const tloustkaVal = document.getElementById('calc-tloustka').value;
+    const platbyVal = document.getElementById('calc-platby').value;
     const objemVal = (parseFloat(plochaVal) || 0) * ((parseFloat(tloustkaVal) || 0) / 100);
 
     document.getElementById('plocha').value = plochaVal;
     document.getElementById('tloustka_form').value = tloustkaVal + ' cm (vypočteno objemově: ' + objemVal.toFixed(1) + ' m³)';
+    document.getElementById('zprava').value = 'Mám zájem o zateplení. Moje současné platby za vytápění jsou ' + platbyVal + ' Kč/rok.';
     
     document.getElementById('poptavka').scrollIntoView({ behavior: 'smooth' });
   }
@@ -652,7 +670,7 @@
         plocha: document.getElementById('plocha').value,
         typ: document.getElementById('typ').value,
         tloustka: document.getElementById('tloustka_form').value,
-        zprava: document.getElementById('zprava').value,
+        zprava: document.getElementById('zprava'].value || document.getElementById('zprava').value,
         dotace: document.getElementById('chci_dotace').checked ? 'Ano' : 'Ne',
         files: attachments
       };
