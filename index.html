@@ -581,7 +581,6 @@
       celkovaCena = objemM3 * cenaPerM3;
     }
 
-    // Výpočet orientační roční úspory (předpoklad úspory cca 30 % na vytápění při kvalitním zateplení stropu/půdy)
     const rocniUspora = platby * 0.30;
 
     document.getElementById('calc-m3-output').textContent = objemM3.toFixed(1) + ' m³';
@@ -615,7 +614,10 @@
     document.getElementById('zprava').value = 'Mám zájem o půjčení foukacího stroje na víkend (2 500 Kč/den) a materiál Knauf Supafil svépomocí (od 990 Kč/m³).';
   }
 
-  calculatePrice();
+  // Spuštění výpočtu hned při načtení stránky
+  window.onload = function() {
+    calculatePrice();
+  };
 
   function odeslatFormular(event) {
     event.preventDefault();
@@ -670,7 +672,7 @@
         plocha: document.getElementById('plocha').value,
         typ: document.getElementById('typ').value,
         tloustka: document.getElementById('tloustka_form').value,
-        zprava: document.getElementById('zprava'].value || document.getElementById('zprava').value,
+        zprava: document.getElementById('zprava').value,
         dotace: document.getElementById('chci_dotace').checked ? 'Ano' : 'Ne',
         files: attachments
       };
