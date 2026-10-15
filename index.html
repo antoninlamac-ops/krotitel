@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krotitelé energií | Foukaná izolace Knauf Supafil s dotací NZÚ</title>
+<meta name="description" content="Krotitelé energií – foukaná tepelná izolace Knauf Supafil pro stropy, klenby, podkroví a dutiny. Nejlepší cena na trhu od 1 090 Kč/m³. Spočítejte si cenu v naší kalkulačce včetně dopravy zdarma a poptávejte nezávazně.">
+
+<!-- Favicony -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2317202b'/><path d='M30 70 L50 30 L70 70 Z' fill='%23e4690b'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2317202b'/><path d='M30 70 L50 30 L70 70 Z' fill='%23e4690b'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f3f0;
+    --bg-alt:#ffffff;
+    --ink:#1c1b19;
+    --ink-soft:#4a4844;
+    --line:#ddd9d1;
+    --accent:#e4690b;
+    --accent-dark:#b94f06;
+    --navy:#17202b;
+    --navy-soft:#223042;
+    --ok:#2e7d32;
+    --radius:10px;
+    --maxw:1120px;
+    --font-head:'Oswald', 'Arial Narrow', sans-serif;
+    --font-body:'Inter', system-ui, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14161a;
+      --bg-alt:#1b1e23;
+      --ink:#f1efe9;
+      --ink-soft:#c4c1b8;
+      --line:#303437;
+      --navy:#0d1117;
+      --navy-soft:#1a222c;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14161a; --bg-alt:#1b1e23; --ink:#f1efe9; --ink-soft:#c4c1b8;
+    --line:#303437; --navy:#0d1117; --navy-soft:#1a222c; color-scheme: dark;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-head); text-transform:uppercase; letter-spacing:.02em; line-height:1.15; margin:0 0 .5em;}
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  section{padding:72px 0;}
+  .eyebrow{display:inline-block; color:var(--accent); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.78rem; margin-bottom:10px;}
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50; background:var(--navy); color:#f4f3f0;
+    border-bottom:3px solid var(--accent);
+  }
+  header .bar{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:var(--maxw); margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--font-head); font-weight:700; font-size:1.15rem; text-transform:uppercase; letter-spacing:.03em;}
+  .brand .chip{width:14px; height:14px; background:var(--accent); transform:rotate(45deg); flex:none;}
+  nav{display:flex; gap:22px; font-size:.92rem; font-weight:600;}
+  nav a{text-decoration:none; opacity:.85; padding:6px 0; border-bottom:2px solid transparent;}
+  nav a:hover{opacity:1; border-color:var(--accent);}
+  .nav-cta{background:var(--accent); color:#fff !important; padding:9px 16px !important; border-radius:6px; border:none !important;}
+  .menu-btn{display:none; background:none; border:1px solid #f4f3f0; color:#f4f3f0; border-radius:6px; padding:8px 10px; font-size:1.1rem;}
+  @media (max-width:860px){
+    nav{position:fixed; inset:56px 0 auto 0; background:var(--navy); flex-direction:column; padding:10px 24px 20px; gap:4px; transform:translateY(-120%); transition:transform .25s ease; border-bottom:3px solid var(--accent);}
+    nav.open{transform:translateY(0);}
+    .menu-btn{display:inline-block;}
+    .nav-cta{display:inline-block; margin-top:6px; text-align:center;}
+  }
+
+  /* Hero */
+  .hero{
+    background:
+      repeating-linear-gradient(135deg, rgba(228,105,11,.08) 0 14px, transparent 14px 28px),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%);
+    color:#f4f3f0; padding:84px 0 64px; border-bottom:6px solid var(--accent);
+  }
+  .hero .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center;}
+  @media (max-width:860px){ .hero .wrap{grid-template-columns:1fr;} }
+  .hero h1{font-size:clamp(1.8rem,4vw,2.7rem); color:#fff;}
+  .hero h1 span{color:var(--accent);}
+  .hero p.lead{color:#d7d4cc; font-size:1.05rem; max-width:48ch;}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:22px;}
+  .btn{display:inline-block; padding:13px 24px; border-radius:7px; font-weight:700; text-decoration:none; font-size:.95rem; letter-spacing:.02em; border:2px solid transparent; cursor:pointer;}
+  .btn-primary{background:var(--accent); color:#fff;}
+  .btn-primary:hover{background:var(--accent-dark);}
+  .btn-outline{border-color:#f4f3f0; color:#f4f3f0; background:transparent;}
+  .btn-outline:hover{background:rgba(244,243,240,.1);}
+  .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+  .badge{background:rgba(244,243,240,.08); border:1px solid rgba(244,243,240,.25); padding:8px 12px; border-radius:6px; font-size:.82rem; color:#eceae4;}
+  
+  /* Krotitel ilustrace / fotka */
+  .hero-panel{background:rgba(244,243,240,.04); border:1px solid rgba(244,243,240,.15); border-radius:var(--radius); padding:20px; text-align:center;}
+  .hero-img{width:100%; border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.4); margin-bottom:12px; object-fit:cover;}
+
+  /* Promo Banner */
+  .promo-banner{
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: #fff;
+    padding: 32px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--navy);
+  }
+  .promo-banner h2{
+    font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+    margin: 0 0 8px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .promo-banner p{
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+    opacity: .95;
+  }
+
+  /* Section headers */
+  .sec-head{max-width:65ch; margin-bottom:36px;}
+  .sec-head h2{font-size:clamp(1.4rem,3vw,2rem);}
+
+  /* Pricing / Calculator Section */
+  .pricing{background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .pricing-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;}
+  @media (max-width:860px){.pricing-grid{grid-template-columns:1fr;}}
+  .price-card{background:var(--bg); border:1px solid var(--line); border-radius:var(--radius); padding:28px;}
+  .price-card h3{font-size:1.2rem; margin-bottom:16px;}
+  .price-highlight{font-size:1.15rem; font-weight:700; color:var(--accent); margin-bottom:16px; background:rgba(228,105,11,.08); padding:12px; border-radius:6px; border-left:4px solid var(--accent);}
+  .price-tiers{list-style:none; margin:0 0 20px 0; padding:0; display:grid; gap:10px;}
+  .price-tiers li{display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--line); font-size:.92rem;}
+  .price-tiers li span:last-child{font-weight:600;}
+
+  /* Calculator Form */
+  .calc-box{background:var(--bg); border:1px solid var(--line); border-radius:var(--radius); padding:28px;}
+  .calc-box h3{font-size:1.2rem; margin-bottom:16px;}
+  .calc-result{background:var(--navy); color:#fff; padding:16px; border-radius:6px; margin-top:20px; text-align:center;}
+  .calc-result .res-val{font-family:var(--font-head); font-size:1.8rem; color:var(--accent); margin-top:4px;}
+  .calc-result .res-note{font-size:.85rem; opacity:.9; margin-top:4px;}
+  .calc-free-shipping{display:inline-block; background:var(--ok); color:#fff; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:4px 10px; border-radius:4px; margin-top:10px;}
+  .calc-btn-row{margin-top:14px; text-align:center;}
+
+  /* Benefits grid */
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media (max-width:860px){.grid3{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.grid3{grid-template-columns:1fr;}}
+  .card{background:var(--bg-alt); border:1px solid var(--line); border-radius:var(--radius); padding:22px; border-top:4px solid var(--accent);}
+  .card h3{font-size:1rem; margin-bottom:8px; text-transform:none; letter-spacing:0;}
+  .card p{color:var(--ink-soft); font-size:.92rem; margin:0;}
+  .ico{width:34px; height:34px; border-radius:7px; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:var(--font-head); margin-bottom:12px;}
+
+  /* Steps */
+  .steps{list-style:none; margin:0; padding:0; counter-reset:step; display:grid; gap:18px;}
+  .steps li{counter-increment:step; display:grid; grid-template-columns:56px 1fr; gap:18px; background:var(--bg-alt); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px;}
+  .steps li::before{content:counter(step); font-family:var(--font-head); font-size:1.5rem; font-weight:700; color:#fff; background:var(--navy); width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .steps h3{font-size:1rem; margin-bottom:4px; text-transform:none;}
+  .steps p{color:var(--ink-soft); margin:0; font-size:.92rem;}
+
+  /* Dotace */
+  .dotace{background:var(--navy); color:#f4f3f0;}
+  .dotace .sec-head .eyebrow{color:var(--accent);}
+  .dotace-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start;}
+  @media (max-width:860px){.dotace-grid{grid-template-columns:1fr;}}
+  .dotace ul{margin:0; padding:0; list-style:none; display:grid; gap:12px;}
+  .dotace li{display:flex; gap:10px; color:#d7d4cc; font-size:.95rem;}
+  .dotace li b{color:var(--accent); flex:none;}
+  .note{background:rgba(244,243,240,.07); border:1px solid rgba(244,243,240,.2); border-radius:var(--radius); padding:16px 18px; font-size:.88rem; color:#cfccc4; margin-top:18px;}
+
+  /* Form */
+  .form-wrap{display:grid; grid-template-columns:1fr 1.3fr; gap:40px;}
+  @media (max-width:860px){.form-wrap{grid-template-columns:1fr;}}
+  .contact-box{background:var(--bg-alt); border:1px solid var(--line); border-radius:var(--radius); padding:24px;}
+  .contact-box h3{font-size:1rem;}
+  .contact-box a{color:var(--accent-dark); font-weight:600; text-decoration:none;}
+  .contact-box .line{display:flex; gap:10px; align-items:flex-start; padding:10px 0; border-top:1px solid var(--line); font-size:.92rem;}
+  .contact-box .line:first-of-type{border-top:none;}
+  form{background:var(--bg-alt); border:1px solid var(--line); border-radius:var(--radius); padding:26px;}
+  .frow{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
+  @media (max-width:560px){.frow{grid-template-columns:1fr;}}
+  label{display:block; font-size:.85rem; font-weight:600; margin-bottom:6px;}
+  input,select,textarea{
+    width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:6px;
+    background:var(--bg); color:var(--ink); font-family:var(--font-body); font-size:.95rem;
+  }
+  textarea{resize:vertical; min-height:90px;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent); outline-offset:1px;}
+  .fgroup{margin-bottom:16px;}
+  .consent{display:flex; gap:10px; align-items:flex-start; font-size:.82rem; color:var(--ink-soft);}
+  .consent input{width:auto; margin-top:3px;}
+  .submit-row{display:flex; align-items:center; gap:16px; margin-top:6px; flex-wrap:wrap;}
+  .form-note{font-size:.78rem; color:var(--ink-soft);}
+
+  /* Recenze sekce */
+  .reviews{background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center;}
+  .reviews-box{background:var(--bg); border:1px solid var(--line); border-radius:var(--radius); padding:32px; max-width:700px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:16px;}
+  .reviews-box p{color:var(--ink-soft); margin:0; font-size:1.05rem;}
+  .reviews-links{display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:10px;}
+
+  footer{background:var(--navy); color:#cfccc4; padding:36px 0;}
+  footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; font-size:.85rem;}
+  footer b{color:#f4f3f0;}
+
+  .skip{position:absolute; left:-999px;}
+  .skip:focus{left:10px; top:10px; background:#fff; color:#000; padding:8px; z-index:100;}
+</style>
+</head>
+<body>
+<a class="skip" href="#poptavka">Přeskočit na poptávkový formulář</a>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="chip"></span>Krotitelé energií</div>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#vyhody">O službě</a>
+      <a href="#cennik">Ceník & Kalkulačka</a>
+      <a href="#postup">Postup</a>
+      <a href="#dotace">Dotace NZÚ</a>
+      <a href="#recenze">Recenze</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav-cta" href="#poptavka">Nezávazná poptávka</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Foukaná tepelná izolace Knauf Supafil</span>
+      <h1>Zateplíme váš strop i podkroví <span>bez bourání a nepořádku</span></h1>
+      <p class="lead">Foukaná izolace Knauf Supafil pro stropy, klenbové a trámové konstrukce, podkroví a dutiny. Lovíme unikající teplo z vašeho domu na Karlovarsku, Tachovsku, Chomutovsku, Toužimsku, v západních i části středních Čech a v Ústeckém kraji.</p>
+      <div class="cta-row">
+        <a href="#poptavka" class="btn btn-primary">Chci nezávaznou nabídku</a>
+        <a href="#cennik" class="btn btn-outline">Zobrazit ceník a kalkulačku</a>
+      </div>
+      <div class="badges">
+        <span class="badge"><b>Nejlepší cena na trhu od 1 090 Kč/m³</b></span>
+        <span class="badge">Realizace do jednoho dne</span>
+        <span class="badge">Pracujeme i o víkendech</span>
+        <span class="badge">Knauf Supafil špičková kvalita</span>
+        <span class="badge">Pomoc s žádostí o dotaci</span>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <!-- Vložený obrázek krotitele foukajícího vatu -->
+      <img src="Gemini_Generated_Image_p7ktb2p7ktb2p7kt.jpeg" alt="Krotitelé energií – foukaná izolace" class="hero-img">
+      <p style="color:#d7d4cc; font-size:.9rem; margin:0; font-style:italic;">„Lovíme unikající teplo z vašeho domu!“</p>
+    </div>
+  </div>
+</section>
+
+<div class="promo-banner">
+  <div class="wrap">
+    <h2>AKCE NA NOVOSTAVBY: 1 090 Kč / m³</h2>
+    <p>Platí při uzavření termínu realizace a zaplacení zálohy!</p>
+  </div>
+</div>
+
+<section id="cennik" class="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ceník & Kalkulačka</span>
+      <h2>Kolik stojí foukaná izolace Knauf Supafil?</h2>
+      <p>Cena se odvíjí od celkového objemu odebraného materiálu. Pro menší realizace do 15 m³ platí paušální sazba.</p>
+    </div>
+    
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Ceník materiálu Knauf Supafil</h3>
+        <div class="price-highlight">
+          <strong>Nejlepší cena na trhu: od 1 090 Kč / m³</strong>
+        </div>
+        <ul class="price-tiers">
+          <li><span>Do 15 m³ (paušální sazba)</span> <span>25 000 Kč celkem</span></li>
+          <li><span>Nad 15 m³ (základní sazba)</span> <span>1 490 Kč / m³</span></li>
+          <li><span>Akce novostavby (záloha + termín)</span> <span>1 090 Kč / m³</span></li>
+        </ul>
+        <p style="font-size:.85rem; color:var(--ink-soft); margin-top:14px;">* Uvedené ceny jsou orientační. Přesnou cenovou nabídku vám rádi spočítáme na míru po zaměření nebo upřesnění parametrů konstrukce a tloušťky izolace.</p>
+      </div>
+
+      <div class="calc-box">
+        <h3>Orientační kalkulačka ceny</h3>
+        <div class="fgroup">
+          <label for="calc-plocha">Celková plocha k zateplení (m²)</label>
+          <input type="number" id="calc-plocha" min="1" value="100" oninput="calculatePrice()">
+        </div>
+        <div class="fgroup">
+          <label for="calc-tloustka">Požadovaná tloušťka izolace (cm)</label>
+          <input type="number" id="calc-tloustka" min="1" value="30" oninput="calculatePrice()">
+        </div>
+        <div class="calc-result">
+          <div>Vypočtený objem: <span id="calc-m3-output" style="color:#fff; font-weight:700;">30 m³</span></div>
+          <div style="margin-top:8px;">Odhadovaná celková cena:</div>
+          <div class="res-val" id="calc-price-output">44 700 Kč</div>
+          <div class="res-note" id="calc-unit-output">(cca 1 490 Kč / m³)</div>
+          <div><span class="calc-free-shipping">🚚 Doprava zdarma</span></div>
+          <div class="calc-btn-row">
+            <button type="button" class="btn btn-primary" style="padding:10px 20px; font-size:.9rem;" onclick="prefillAndScroll()">Poptat tuto kalkulaci</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vyhody">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">O službě</span>
+      <h2>Řešení na míru vaší konstrukci</h2>
+      <p>Ať už máte klasický trámový strop, cihelné klenby, podkroví nebo dutinu ve zdi, navrhneme tloušťku a typ izolace Knauf Supafil podle skutečné geometrie a stavu konstrukce.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><div class="ico">1</div><h3>Zaměření na místě</h3><p>Nejprve si konstrukci prohlédneme a zaměříme, aby nabídka odpovídala realitě, ne jen odhadu z fotek.</p></div>
+      <div class="card"><div class="ico">2</div><h3>Knauf Supafil</h3><p>Používáme prémiovou minerální foukanou izolaci Knauf Supafil s vynikajícími tepelně i zvukově izolačními vlastnostmi.</p></div>
+      <div class="card"><div class="ico">3</div><h3>Čistá realizace</h3><p>Instalace probíhá bez bourání, s minimem nepořádku – materiál se fouká hadicí skrz montážní otvory.</p></div>
+      <div class="card"><div class="ico">4</div><h3>Ochrana proti škůdcům</h3><p>Materiál Knauf Supafil je anorganický, nepodléhá plísním a je odolný proti hlodavcům a hmyzu.</p></div>
+      <div class="card"><div class="ico">5</div><h3>Úspora energie</h3><p>Kvalitně provedená izolace stropu patří k nejefektivnějším opatřením pro snížení úniku tepla z domu.</p></div>
+      <div class="card"><div class="ico">6</div><h3>Podklady pro dotaci</h3><p>Připravíme fotodokumentaci a podklady, které budete potřebovat k žádosti o dotaci NZÚ.</p></div>
+      <div class="card"><div class="ico">7</div><h3>Novostavby i bungalovy</h3><p>Izolaci realizujeme nejen u starších domů s klenbami, ale i u novostaveb a bungalovů.</p></div>
+      <div class="card"><div class="ico">8</div><h3>Pracujeme i o víkendech</h3><p>Termín realizace přizpůsobíme vašim možnostem – nabízíme i víkendové termíny.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="postup" style="background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Jak to probíhá</span>
+      <h2>Od poptávky po předání</h2>
+    </div>
+    <ul class="steps">
+      <li><div><h3>Nezávazná poptávka</h3><p>Vyplníte formulář níže nebo zavoláte – zjistíme základní parametry (typ konstrukce, plocha, lokalita).</p></div></li>
+      <li><div><h3>Obhlídka a zaměření</h3><p>Přijedeme na místo, zaměříme konstrukci a navrhneme vhodnou tloušťku a materiál Knauf Supafil.</p></div></li>
+      <li><div><h3>Nabídka a konzultace dotace</h3><p>Dostanete cenovou nabídku a poradíme, zda a jak lze využít dotaci Nová zelená úsporám.</p></div></li>
+      <li><div><h3>Realizace</h3><p>Foukanou izolaci instalujeme v domluveném termínu, zpravidla v řádu hodin.</p></div></li>
+      <li><div><h3>Předání a podklady</h3><p>Předáme dílo a potřebnou dokumentaci – včetně podkladů pro případnou žádost o dotaci.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="dotace" class="dotace">
+  <div class="wrap">
+    <div class="dotace-grid">
+      <div>
+        <span class="eyebrow">Dotace</span>
+        <h2>Nová zelená úsporám (NZÚ)</h2>
+        <p style="color:#d7d4cc;">Zateplení stropu nebo podkroví patří mezi opatření podporovaná programem Nová zelená úsporám. Rádi vám s přípravou žádosti pomůžeme.</p>
+        <div class="note">Konkrétní výše dotace a podmínky programu se v čase mění – aktuální parametry doporučujeme ověřit na stránkách programu nebo si je nechat poradit přímo od nás před podáním žádosti.</div>
+      </div>
+      <ul>
+        <li><b>→</b> Posoudíme, zda vaše realizace splňuje podmínky programu.</li>
+        <li><b>→</b> Zajistíme potřebnou fotodokumentaci před, během a po realizaci.</li>
+        <li><b>→</b> Doporučíme materiál Knauf Supafil a tloušťku odpovídající požadovaným parametrům.</li>
+        <li><b>→</b> Předáme vám podklady a technické listy k žádosti.</li>
+        <li><b>→</b> Vypracujeme renovační pas a energetický štítek (PENB).</li>
+        <li><b>→</b> Zařídíme bezúročnou půjčku od státu.</li>
+        <li><b>→</b> Finanční poradenství pro získání komerčního úvěru na dofinancování rekonstrukce.</li>
+        <li><b>→</b> V případě potřeby doporučíme ověřeného zpracovatele žádosti.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="recenze" class="reviews">
+  <div class="wrap">
+    <div class="sec-head" style="margin: 0 auto 36px;">
+      <span class="eyebrow">Hodnocení zákazníků</span>
+      <h2>Co o nás říkají naši klienti</h2>
+    </div>
+    <div class="reviews-box">
+      <p>Jste spokojeni s naší prací? Budeme rádi za vaše hodnocení, které nám pomáhá zlepšovat naše služby.</p>
+      <div class="reviews-links">
+        <a href="https://share.google/P9yHdh7K0pHjD1zOW" class="btn btn-primary" target="_blank" rel="noopener">Ohodnotit na Google</a>
+        <a href="https://www.firmy.cz/detail/13233663-izolace-fuk-s-r-o-praha-vinohrady.html#hodnoceni" class="btn btn-outline" style="border-color:var(--ink); color:var(--ink);" target="_blank" rel="noopener">Ohodnotit na Firmy.cz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="poptavka">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Poptávka</span>
+      <h2>Nezávazná poptávka zdarma</h2>
+      <p>Vyplňte formulář a ozveme se vám zpět s návrhem termínu obhlídky nebo orientační nabídkou.</p>
+    </div>
+    <div class="form-wrap">
+      <div class="contact-box">
+        <h3>Kontakt</h3>
+        <div class="line">📞 <a href="tel:+420000000000">+420 XXX XXX XXX</a></div>
+        <div class="line">✉️ <a href="mailto:info@krotitele-energii.cz">info@krotitele-energii.cz</a></div>
+        <div class="line">📍 Karlovarsko, Tachovsko, Chomutovsko, Toužimsko, západní Čechy, část středních Čech, Ústecký kraj</div>
+        <div class="line">🕒 Po–Pá 7:00–17:00</div>
+      </div>
+
+      <!--
+         Formulář odesílá data přes službu FormSubmit.co (funguje i na statickém webu bez vlastního backendu).
+         1) V action="" níže nahraďte e-mail svým skutečným e-mailem.
+         2) První odeslaný formulář vám přijde jako potvrzovací e-mail od FormSubmit – potvrďte ho kliknutím,
+            až poté začnou poptávky chodit normálně.
+      -->
+      <form action="https://formsubmit.co/info@krotitele-energii.cz" method="POST">
+        <input type="hidden" name="_subject" value="Nová poptávka – foukaná izolace Knauf Supafil">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="frow">
+          <div><label for="jmeno">Jméno a příjmení *</label><input id="jmeno" name="Jméno" type="text" required></div>
+          <div><label for="telefon">Telefon *</label><input id="telefon" name="Telefon" type="tel" required></div>
+        </div>
+        <div class="frow">
+          <div><label for="email">E-mail</label><input id="email" name="E-mail" type="email"></div>
+          <div><label for="obec">Obec / lokalita nemovitosti *</label><input id="obec" name="Obec/lokalita" type="text" required></div>
+        </div>
+        <div class="frow">
+          <div><label for="plocha">Plocha k zateplení (m²)</label><input id="plocha" name="Plocha m2" type="number" min="0"></div>
+          <div>
+            <label for="typ">Typ konstrukce</label>
+            <select id="typ" name="Typ konstrukce">
+              <option>Klenbový / trámový strop</option>
+              <option>Podkroví</option>
+              <option>Plochá střecha</option>
+              <option>Dutina ve zdi</option>
+              <option>Nevím / poradit</option>
+            </select>
+          </div>
+        </div>
+        <div class="fgroup">
+          <label for="tloustka_form">Zvolená tloušťka (cm)</label>
+          <input id="tloustka_form" name="Zvolená tloušťka cm" type="text">
+        </div>
+        <div class="fgroup">
+          <label for="zprava">Zpráva / Poznámka k poptávce</label>
+          <textarea id="zprava" name="Zpráva" placeholder="Stručný popis stavu..."></textarea>
+        </div>
+        <div class="fgroup">
+          <label class="consent" style="font-weight:600; color:var(--ink); font-size:.9rem;">
+            <input type="checkbox" id="chci_dotace" name="Chci dotace" value="Ano" style="width:auto; margin-top:3px;">
+            Mám zájem o pomoc s dotací Nová zelená úsporám (NZÚ)
+          </label>
+        </div>
+        <label class="consent">
+          <input type="checkbox" required name="Souhlas GDPR" value="Ano">
+          Souhlasím se zpracováním osobních údajů za účelem vyřízení poptávky.
+        </label>
+        <div class="submit-row">
+          <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
+          <span class="form-note">Ozveme se obvykle do 2 pracovních dnů.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="wrap">
+    <div><b>Krotitelé energií</b><br>Foukaná izolace Knauf Supafil stropů a podkroví</div>
+    <div>Působnost: Karlovarsko, Tachovsko, Chomutovsko, Toužimsko, západní a část středních Čech, Ústecký kraj</div>
+    <div>+420 XXX XXX XXX · info@krotitele-energii.cz</div>
+    <div>© <span id="y"></span> Krotitelé energií</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  function calculatePrice() {
+    const plocha = parseFloat(document.getElementById('calc-plocha').value) || 0;
+    const tloustkaCm = parseFloat(document.getElementById('calc-tloustka').value) || 0;
+    
+    const objemM3 = plocha * (tloustkaCm / 100);
+
+    let cenaPerM3 = 1490;
+    if (objemM3 > 100) {
+      cenaPerM3 = 1090;
+    } else if (objemM3 > 50) {
+      cenaPerM3 = 1250;
+    } else if (objemM3 > 30) {
+      cenaPerM3 = 1350;
+    }
+
+    let celkovaCena = 0;
+    if (objemM3 > 0 && objemM3 <= 15) {
+      celkovaCena = 25000;
+    } else {
+      celkovaCena = objemM3 * cenaPerM3;
+    }
+
+    document.getElementById('calc-m3-output').textContent = objemM3.toFixed(1) + ' m³';
+    document.getElementById('calc-price-output').textContent = Math.round(celkovaCena).toLocaleString('cs-CZ') + ' Kč';
+    
+    if (objemM3 > 0 && objemM3 <= 15) {
+      document.getElementById('calc-unit-output').textContent = '(paušální sazba do 15 m³)';
+    } else if (objemM3 > 0) {
+      document.getElementById('calc-unit-output').textContent = '(cca ' + cenaPerM3 + ' Kč / m³)';
+    } else {
+      document.getElementById('calc-unit-output').textContent = '(zadejte platné hodnoty)';
+    }
+  }
+
+  function prefillAndScroll() {
+    const plochaVal = document.getElementById('calc-plocha').value;
+    const tloustkaVal = document.getElementById('calc-tloustka').value;
+    const objemVal = (parseFloat(plochaVal) || 0) * ((parseFloat(tloustkaVal) || 0) / 100);
+
+    document.getElementById('plocha').value = plochaVal;
+    document.getElementById('tloustka_form').value = tloustkaVal + ' cm (vypočteno objemově: ' + objemVal.toFixed(1) + ' m³)';
+    
+    document.getElementById('poptavka').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  calculatePrice();
+</script>
+</body>
+</html>
