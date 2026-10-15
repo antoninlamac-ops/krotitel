@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krotitelé energií | Foukaná izolace Knauf Supafil s dotací NZÚ</title>
-<meta name="description" content="Krotitelé energií – foukaná tepelná izolace Knauf Supafil pro stropy, klenby, podkroví a dutiny. Nejlepší cena na trhu od 1 090 Kč/m³. Spočítejte si cenu v naší kalkulačce včetně dopravy zdarma a poptávejte nezávazně.">
+<meta name="description" content="Krotitelé energií – foukaná tepelná izolace Knauf Supafil pro stropy, klenby, podkroví a dutiny. Nejlepší cena na trhu od 1 090 Kč/m³. Možnost půjčení stroje na víkend (foukání svépomocí za 2 500 Kč/den, materiál od 990 Kč/m³). Spočítejte si cenu v naší kalkulačce včetně dopravy zdarma a poptávejte nezávazně.">
 
 <!-- Favicony -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2317202b'/><path d='M30 70 L50 30 L70 70 Z' fill='%23e4690b'/></svg>">
@@ -102,7 +102,7 @@
   .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
   .badge{background:rgba(244,243,240,.08); border:1px solid rgba(244,243,240,.25); padding:8px 12px; border-radius:6px; font-size:.82rem; color:#eceae4;}
   
-  /* Krotitel ilustrace / fotka */
+  /* Krotitel fotka */
   .hero-panel{background:rgba(244,243,240,.04); border:1px solid rgba(244,243,240,.15); border-radius:var(--radius); padding:20px; text-align:center;}
   .hero-img{width:100%; border-radius:8px; box-shadow:0 10px 25px rgba(0,0,0,0.4); margin-bottom:12px; object-fit:cover;}
 
@@ -149,6 +149,22 @@
   .calc-result .res-note{font-size:.85rem; opacity:.9; margin-top:4px;}
   .calc-free-shipping{display:inline-block; background:var(--ok); color:#fff; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:4px 10px; border-radius:4px; margin-top:10px;}
   .calc-btn-row{margin-top:14px; text-align:center;}
+
+  /* Svépomoc sekce */
+  .svepomoc-box{
+    background: var(--navy);
+    color: #f4f3f0;
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-top: 40px;
+    border: 2px solid var(--accent);
+  }
+  .svepomoc-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:30px; align-items:center;}
+  @media(max-width:860px){.svepomoc-grid{grid-template-columns:1fr;}}
+  .svepomoc-box h3{font-size:1.5rem; color:#fff; margin-bottom:12px;}
+  .svepomoc-box p{color:#d7d4cc; margin-bottom:16px;}
+  .svepomoc-badges{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
+  .svepomoc-badge{background:rgba(228,105,11,.2); border:1px solid var(--accent); color:#fff; padding:8px 14px; border-radius:6px; font-weight:700; font-size:.9rem;}
 
   /* Benefits grid */
   .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
@@ -224,6 +240,7 @@
     <nav>
       <a href="#vyhody">O službě</a>
       <a href="#cennik">Ceník & Kalkulačka</a>
+      <a href="#svepomoc">Foukání svépomocí</a>
       <a href="#postup">Postup</a>
       <a href="#dotace">Dotace NZÚ</a>
       <a href="#recenze">Recenze</a>
@@ -284,6 +301,7 @@
           <li><span>Do 15 m³ (paušální sazba)</span> <span>25 000 Kč celkem</span></li>
           <li><span>Nad 15 m³ (základní sazba)</span> <span>1 490 Kč / m³</span></li>
           <li><span>Akce novostavby (záloha + termín)</span> <span>1 090 Kč / m³</span></li>
+          <li><span>Foukání svépomocí (materiál)</span> <span>od 990 Kč / m³</span></li>
         </ul>
         <p style="font-size:.85rem; color:var(--ink-soft); margin-top:14px;">* Uvedené ceny jsou orientační. Přesnou cenovou nabídku vám rádi spočítáme na míru po zaměření nebo upřesnění parametrů konstrukce a tloušťky izolace.</p>
       </div>
@@ -307,6 +325,24 @@
           <div class="calc-btn-row">
             <button type="button" class="btn btn-primary" style="padding:10px 20px; font-size:.9rem;" onclick="prefillAndScroll()">Poptat tuto kalkulaci</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sekce Foukání svépomocí -->
+    <div id="svepomoc" class="svepomoc-box">
+      <div class="svepomoc-grid">
+        <div>
+          <span class="eyebrow" style="color:var(--accent);">Chcete si to udělat sami?</span>
+          <h3>Foukání svépomocí – Půjčte si stroj na víkend!</h3>
+          <p>Nafoukejte si izolaci svépomocí. Půjčíme vám profesionální foukací stroj na celý víkend a dodáme špičkový materiál Knauf Supafil za zvýhodněné ceny.</p>
+          <div class="svepomoc-badges">
+            <span class="svepomoc-badge">Stroj: 2 500 Kč / den</span>
+            <span class="svepomoc-badge">Materiál: od 990 Kč / m³</span>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <a href="#poptavka" class="btn btn-primary" style="font-size:1.05rem; padding:15px 30px;" onclick="selectSvepomoc()">Poptat půjčení stroje</a>
         </div>
       </div>
     </div>
@@ -426,8 +462,10 @@
         <div class="frow">
           <div><label for="plocha">Plocha k zateplení (m²)</label><input id="plocha" name="Plocha m2" type="number" min="0"></div>
           <div>
-            <label for="typ">Typ konstrukce</label>
-            <select id="typ" name="Typ konstrukce">
+            <label for="typ">Typ realizace</label>
+            <select id="typ" name="Typ realizace">
+              <option>Realizace na klíč (montáž firmou)</option>
+              <option>Půjčení stroje a materiál svépomocí</option>
               <option>Klenbový / trámový strop</option>
               <option>Podkroví</option>
               <option>Plochá střecha</option>
@@ -518,6 +556,11 @@
     document.getElementById('tloustka_form').value = tloustkaVal + ' cm (vypočteno objemově: ' + objemVal.toFixed(1) + ' m³)';
     
     document.getElementById('poptavka').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function selectSvepomoc() {
+    document.getElementById('typ').value = 'Půjčení stroje a materiál svépomocí';
+    document.getElementById('zprava').value = 'Mám zájem o půjčení foukacího stroje na víkend (2 500 Kč/den) a materiál Knauf Supafil svépomocí (od 990 Kč/m³).';
   }
 
   calculatePrice();
